@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head runat="server">
+    <!-- Início das meta tags -->
+    <meta name="title" content="TR3ARQ – Arquitetura e Interiores" />
+    <meta name="description" content="TR3ARQ é uma empresa de arquitetura e interiores." />
+    <meta name="abstract" content="TR3ARQ é uma empresa de arquitetura e interiores." />
+    <meta name="keywords" content="TR3ARQ, Arquitetura, Interiores, São Paulo" />
+    <meta name="rating" content="general" />
+    <meta name="author" content="Poob Info; Allex Rocha" />
+    <!-- Fim das meta tags -->
+    <title></title>
+    <!-- Carrega o CSS -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- Carrega os JavaScript's -->
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/jQuery.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/jQuery-migrate-1.1.1.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/BackgroundStretcher.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Background.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Menu.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/ImageOver.js") %>"></script>
+    <!-- Carrega os CSS's -->
+    <!--[if lt IE 8]>
+    <div style='text-align: center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>
+ 	<![endif]-->
+    <!--[if lt IE 9]>   
+    <link href="~/Content/IE.css" type="text/css" rel="stylesheet" media="screen">
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/Html5.js") %>"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' type='text/css' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' type='text/css' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' type='text/css' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' type='text/css' rel='stylesheet'>  
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Início do código do Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-43031323-7', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- Fim do código do Google Analytics -->
+</head>
+<body>
+    <form id="form1" runat="server" style="height: 100%;">
+        <div class="extra-block1">
+            <!-- Início das Redes Sociais -->
+            <div class="row-top">
+                <div class="main">
+                    <ul class="list-soc">
+                        <li>
+                            <asp:HyperLink ID="lnkFacebook" NavigateUrl="https://www.facebook.com/TR3ARQ" Target="_blank" Text="Facebook" ToolTip="Facebook" runat="server">
+                                <asp:Image ID="Facebook" ImageUrl="~/Images/facebook-icon.png" AlternateText="Facebook" ImageAlign="Left" runat="server" />
+                            </asp:HyperLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Fim das Redes Sociais -->
+            <!-- Início do Header e Menu -->
+            <header>
+                <div class="row-nav">
+                    <div class="main">
+                        <h1 class="logo">
+                            <asp:HyperLink ID="lnkLogo" NavigateUrl="~/Home" ImageUrl="~/Images/logo.png" ToolTip="TR3ARQ – Arquitetura e Interiores" runat="server"></asp:HyperLink>
+                        </h1>
+                        <nav>
+                            <ul class="menu">
+                                <li id="liHome">
+                                    <asp:HyperLink ID="lnkHome" NavigateUrl="~/Home" ToolTip="Home" runat="server">Home</asp:HyperLink>
+                                </li>
+                                <li id="liPerfil">
+                                    <asp:HyperLink ID="lnkPerfil" NavigateUrl="~/Perfil" ToolTip="Perfil" runat="server">Perfil</asp:HyperLink>
+                                </li>
+                                <li id="liPortfolio">
+                                    <asp:HyperLink ID="lnkPortfolio" NavigateUrl="~/Portfolio/" ToolTip="Portfolio" runat="server">Portfolio</asp:HyperLink>
+                                </li>
+                                <li id="liContato">
+                                    <asp:HyperLink ID="lnkContato" NavigateUrl="~/Contato" ToolTip="Contato" runat="server">Contato</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </header>
+            <!-- Fim do Header e Menu -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="block">
+            <div id="navButtons" class="nav-buttons" runat="server">
+                <div id="nav">&nbsp;</div>
+            </div>
+            <!-- Início do Rodapé -->
+            <footer>
+                <div class="main aligncenter">
+                    <div class="footer">
+                        Tel.: +55 11 3938-7468 <span>|</span> E-mail: <asp:HyperLink ID="lnkEmail" NavigateUrl="mailto: tr3arq@tr3arq.com" ToolTip="Envie-nos um e-mail" runat="server">tr3arq@tr3arq.com</asp:HyperLink> <span>|</span> Rua Barão de Jundiaí, 522 – Alto da Lapa – São Paulo, SP.
+                        <br />
+                         © Copyright 2015-<%: DateTime.Now.Year %> <span>|</span> <asp:HyperLink ID="lnkTR3ARQ" NavigateUrl="~/Perfil" ToolTip="TR3ARQ – Arquitetura e Interiores" rel="nofollow" runat="server">TR3ARQ – Arquitetura e Interiores</asp:HyperLink> <span>|</span> Todos os direitos reservados.
+                        <br />
+                        <!-- Início da Poob Info -->
+                        Powered by <asp:HyperLink ID="lnkPoobInfo" NavigateUrl="http://www.poob.com.br" Target="_blank" ImageUrl="~/Images/logo-poob-info.png" ToolTip="Powered by Poob Info" runat="server" />
+                        <!-- Fim da Poob Info -->
+                    </div>
+                </div>
+            </footer>
+            <!-- Fim do Rodapé -->
+        </div>
+    </form>
+</body>
+</html>
